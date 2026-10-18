@@ -2,9 +2,6 @@
 import Link from "next/link";
 
 export default function Home() {
-  // साल (Year) को बिल्ड एरर से बचाने के लिए यहाँ सेट किया है
-  const currentYear = new Date().getFullYear();
-
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800 font-sans">
       
@@ -139,7 +136,7 @@ export default function Home() {
           <p className="text-sm mb-4">Property SALE / PURCHASE & CONSTRUCTION</p>
           <p className="text-sm mb-2">📞 Call: <span className="text-white font-semibold">+91-9999138802</span></p>
           <div className="border-t border-gray-700 mt-6 pt-4 text-xs text-gray-500">
-            © {currentYear} NeelAnjali Properties. All rights reserved.
+            © 2026 NeelAnjali Properties. All rights reserved.
           </div>
         </div>
       </footer>
