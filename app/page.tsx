@@ -2,6 +2,9 @@
 import Link from "next/link";
 
 export default function Home() {
+  // साल (Year) को बिल्ड एरर से बचाने के लिए यहाँ सेट किया है
+  const currentYear = new Date().getFullYear();
+
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800 font-sans">
       
@@ -9,8 +12,14 @@ export default function Home() {
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 relative overflow-hidden rounded">
-               <Image src="/logo.png" alt="NeelAnjali Properties Logo" fill className="object-contain" />
+            {/* लोगो */}
+            <div className="w-14 h-14 relative overflow-hidden rounded-full border border-gray-200">
+               <Image 
+                 src="/logo140.png" 
+                 alt="NeelAnjali Properties Logo" 
+                 fill 
+                 className="object-cover" 
+               />
             </div>
             <div>
               <h1 className="text-xl font-bold text-blue-800 leading-tight">NeelAnjali Properties</h1>
@@ -89,20 +98,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. CONTACT SECTION (यहाँ होम पेज पर ही कॉन्टैक्ट डाल दिया है) */}
+      {/* 4. CONTACT SECTION (होम पेज पर ही कॉन्टैक्ट) */}
       <section className="bg-gray-100 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-10 text-blue-900">Contact Us</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            {/* Address Box */}
             <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="text-4xl mb-4">📍</div>
               <h4 className="font-bold text-gray-800 mb-2">Our Address</h4>
               <p className="text-gray-600 text-sm">B1/18, Gali no.-2, New Ashok Nagar, Delhi - 110096</p>
             </div>
 
-            {/* Phone Box */}
             <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="text-4xl mb-4">📞</div>
               <h4 className="font-bold text-gray-800 mb-2">Call / WhatsApp</h4>
@@ -110,7 +117,6 @@ export default function Home() {
               <p className="text-gray-500 text-sm">Name: Ajay Biswas</p>
             </div>
 
-            {/* Email Box */}
             <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="text-4xl mb-4">✉️</div>
               <h4 className="font-bold text-gray-800 mb-2">Email Us</h4>
@@ -133,7 +139,7 @@ export default function Home() {
           <p className="text-sm mb-4">Property SALE / PURCHASE & CONSTRUCTION</p>
           <p className="text-sm mb-2">📞 Call: <span className="text-white font-semibold">+91-9999138802</span></p>
           <div className="border-t border-gray-700 mt-6 pt-4 text-xs text-gray-500">
-            © {new Date().getFullYear()} NeelAnjali Properties. All rights reserved.
+            © {currentYear} NeelAnjali Properties. All rights reserved.
           </div>
         </div>
       </footer>
